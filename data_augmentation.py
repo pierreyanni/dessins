@@ -1,3 +1,5 @@
+import numpy as np
+import matplotlib.pyplot as plt
 from scipy.ndimage.interpolation import shift
 from skimage.transform import rotate
 
@@ -9,7 +11,7 @@ class AugmentData:
         self.side = 28
     
     def plot_image(self, image):       
-        print(classes[self.y[image]])
+        print(self.classes[self.y[image]])
         plt.imshow(self.X[image].reshape(self.side, self.side), cmap='gray_r',
                interpolation='nearest')
         plt.show()
